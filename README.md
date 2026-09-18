@@ -4,11 +4,8 @@ Software should be boring: predictable, explicit, composable, and hard to make i
 BoringJS is a small application model on top of Vite. Vite owns the machinery. Boring owns the shape.
 
 ```bash
-pnpm install
-pnpm dev            # example app → http://localhost:5173
-pnpm check          # boring check on the example
-pnpm --filter acme typecheck   # tsc --noEmit
-pnpm test           # check rules, routing, then the example's feature tests
+pnpm create @boring-dev my-app    # or: npm create @boring-dev@latest my-app
+cd my-app && pnpm install && pnpm dev
 ```
 
 Running from a clone, hacking on the packages, and the checks to run: see [CONTRIBUTING.md](CONTRIBUTING.md).
@@ -241,15 +238,16 @@ problems. Suppress with a reason and an expiry: `// boring-ignore B110 until 202
 
 ## Packages
 
-| Package         |                                                                                                              |
-| --------------- | ------------------------------------------------------------------------------------------------------------ |
-| `@boring/core`  | Routing tree and compiler, `resource`, `action`, `policy`, `job`, signals. Platform-free.                    |
-| `@boring/vite`  | The Vite plugin: serves the app, `@/` alias, keeps server code out of the browser, brings the React adapter. |
-| `@boring/node`  | Request handler, SQLite on `node:sqlite`, durable jobs.                                                      |
-| `@boring/react` | The rendering adapter: server render, hydration, client router, `Outlet`, the form-aware JSX runtime.        |
-| `@boring/test`  | `testApp()`.                                                                                                 |
-| `@boring/check` | `boring check`, `boring explain [file]`.                                                                     |
+| Package              |                                                                                                              |
+| -------------------- | ------------------------------------------------------------------------------------------------------------ |
+| `@boring-dev/core`   | Routing tree and compiler, `resource`, `action`, `policy`, `job`, signals. Platform-free.                    |
+| `@boring-dev/vite`   | The Vite plugin: serves the app, `@/` alias, keeps server code out of the browser, brings the React adapter. |
+| `@boring-dev/node`   | Request handler, SQLite on `node:sqlite`, durable jobs.                                                      |
+| `@boring-dev/react`  | The rendering adapter: server render, hydration, client router, `Outlet`, the form-aware JSX runtime.        |
+| `@boring-dev/test`   | `testApp()`.                                                                                                 |
+| `@boring-dev/check`  | `boring check`, `boring explain [file]`.                                                                     |
+| `@boring-dev/create` | `pnpm create @boring-dev my-app`: a starter with one feature, a test, and the commands wired up.             |
 
 ## Not built yet
 
-`create-boring-app`, a production build, a Postgres adapter, and `boring check` autofixes. Requires Node 22.5+.
+A production build, a Postgres adapter, and `boring check` autofixes. Requires Node 22.5+.
