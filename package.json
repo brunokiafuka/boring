@@ -1,0 +1,18 @@
+{
+  "name": "the-boring-stack",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm --filter acme dev",
+    "check": "pnpm --filter acme check",
+    "test": "node --test packages/check/test/*.test.js && vitest run --root packages/core && pnpm --filter acme test",
+    "lint": "oxlint",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check"
+  },
+  "devDependencies": {
+    "oxfmt": "^0.68.0",
+    "oxlint": "^1.83.0",
+    "vitest": "^3.2.0"
+  }
+}

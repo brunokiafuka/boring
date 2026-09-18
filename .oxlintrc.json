@@ -1,0 +1,13 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["typescript", "react", "import", "unicorn"],
+  "categories": { "correctness": "error", "suspicious": "warn", "perf": "warn" },
+  "env": { "browser": true, "node": true, "es2024": true },
+  "ignorePatterns": ["**/node_modules", "**/.boring", "**/dist", "**/fixtures/**"],
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "react/immutability": "off",
+    "react/memo-dependencies": "off",
+    "no-await-in-loop": "off"
+  }
+}

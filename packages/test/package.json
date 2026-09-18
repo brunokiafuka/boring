@@ -1,0 +1,12 @@
+{
+  "name": "@boring/test",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@boring/core": "workspace:*",
+    "@boring/node": "workspace:*"
+  }
+}
