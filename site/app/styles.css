@@ -125,6 +125,7 @@ pre code {
 .site-brand {
   color: var(--ink);
   font-weight: 500;
+  white-space: nowrap;
 }
 .site-brand:hover {
   text-decoration: none;
@@ -264,6 +265,7 @@ pre code {
 .docs {
   display: grid;
   grid-template-columns: 180px minmax(0, 1fr);
+  min-width: 0;
   gap: 48px;
   max-width: var(--page);
   margin: 0 auto;
@@ -327,6 +329,9 @@ pre code {
   text-align: right;
 }
 
+.doc {
+  min-width: 0;
+}
 .doc-header {
   margin-bottom: 32px;
 }
@@ -395,26 +400,93 @@ pre code {
 }
 
 @media (max-width: 720px) {
-  .docs {
-    grid-template-columns: 1fr;
-    gap: 28px;
+  body {
+    font-size: 16px;
   }
-  .docs-nav {
-    position: static;
+  .site-header {
+    padding: 16px;
   }
-  .docs-nav ol {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px 18px;
+  .site-header nav {
+    gap: 16px;
+    font-size: 15px;
   }
-  .docs-outline {
-    display: none !important;
+  .site-footer,
+  .landing {
+    padding-left: 16px;
+    padding-right: 16px;
   }
   .landing section {
     padding: 40px 0;
   }
   .hero {
-    padding-top: 40px !important;
+    padding-top: 32px !important;
+  }
+  .hero .lede {
+    font-size: 18px;
+  }
+  pre {
+    padding: 14px 16px;
+    font-size: 13px;
+  }
+
+  /* Docs: the page list becomes a wrapping strip above the article; the outline goes. */
+  .docs {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+    padding: 8px 16px 48px;
+  }
+  .docs-nav {
+    position: static;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--line);
+  }
+  .docs-nav ol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+  }
+  .docs-outline {
+    display: none !important;
+  }
+  .doc h1 {
+    font-size: 32px;
+  }
+  .doc-header .lede {
+    font-size: 17px;
+  }
+  .doc h2 {
+    font-size: 22px;
+    margin-top: 36px;
+  }
+
+  /* Tables stack: each row becomes a small block, first cell on top. */
+  .doc table,
+  .doc tbody,
+  .doc tr,
+  .doc td {
+    display: block;
+    width: 100%;
+  }
+  .doc thead {
+    display: none;
+  }
+  .doc tr {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .doc td {
+    padding: 2px 0;
+    border: 0;
+  }
+  .doc td:first-child {
+    font-weight: 500;
+  }
+  .doc-footer {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .doc-next {
+    text-align: left;
   }
 }
 
