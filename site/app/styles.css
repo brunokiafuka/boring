@@ -14,15 +14,29 @@
   color-scheme: light dark;
 }
 
+/* The system decides unless <html data-theme> says otherwise. */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --bg: #131417;
     --ink: #e8e8ea;
     --muted: #9a9ca3;
     --line: #2a2c31;
     --well: #1c1d21;
     --accent: #8da2ff;
+    color-scheme: dark;
   }
+}
+:root[data-theme="dark"] {
+  --bg: #131417;
+  --ink: #e8e8ea;
+  --muted: #9a9ca3;
+  --line: #2a2c31;
+  --well: #1c1d21;
+  --accent: #8da2ff;
+  color-scheme: dark;
+}
+:root[data-theme="light"] {
+  color-scheme: light;
 }
 
 * {
@@ -125,6 +139,34 @@ pre code {
 .site-header nav a:hover {
   color: var(--ink);
   text-decoration: none;
+}
+
+/* Which label shows follows the resolved theme, so the server never has to know it. */
+.theme-toggle {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--muted);
+  font: inherit;
+  cursor: pointer;
+}
+.theme-toggle:hover {
+  color: var(--ink);
+}
+.theme-toggle-light,
+:root[data-theme="dark"] .theme-toggle-dark {
+  display: none;
+}
+:root[data-theme="dark"] .theme-toggle-light {
+  display: inline;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-toggle-dark {
+    display: none;
+  }
+  :root:not([data-theme="light"]) .theme-toggle-light {
+    display: inline;
+  }
 }
 
 /* <html data-boring="loading | submitting"> is the only progress API. */
