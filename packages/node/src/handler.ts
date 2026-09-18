@@ -29,6 +29,7 @@ export interface Env {
   root: string;
   manifest: Manifest;
   styles: string[];
+  /** The hydration script. Empty means no client at all: plain HTML, as when prerendering. */
   clientEntry: string;
   transformHtml(url: string, html: string): Promise<string>;
   /** Tests: act as this user instead of asking config.auth. null is signed out. */
@@ -297,9 +298,13 @@ async function document(state: PageState, env: Env) {
     ${env.styles.map((href) => `<link rel="stylesheet" href="${href}" />`).join("\n    ")}
   </head>
   <body>
-    <div id="app">${app}</div>
+    <div id="app">${app}</div>${
+      env.clientEntry
+        ? `
     <script>window.BORING_STATE = ${payload}</script>
-    <script type="module" src="${env.clientEntry}"></script>
+    <script type="module" src="${env.clientEntry}"></script>`
+        : ""
+    }
   </body>
 </html>`;
   return env.transformHtml(state.url, html);
