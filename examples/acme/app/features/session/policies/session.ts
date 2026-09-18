@@ -1,4 +1,4 @@
-import { policy } from "@boring/core";
+import { policy } from "@boring-dev/core";
 
 /** Demo only: anyone may become anyone. A real app would check credentials. */
 export const SessionPolicy = policy({

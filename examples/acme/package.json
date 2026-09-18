@@ -10,17 +10,17 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@boring/core": "workspace:*",
-    "@boring/node": "workspace:*",
-    "@boring/react": "workspace:*",
+    "@boring-dev/core": "workspace:*",
+    "@boring-dev/node": "workspace:*",
+    "@boring-dev/react": "workspace:*",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "zod": "^3.24.0"
   },
   "devDependencies": {
-    "@boring/check": "workspace:*",
-    "@boring/test": "workspace:*",
-    "@boring/vite": "workspace:*",
+    "@boring-dev/check": "workspace:*",
+    "@boring-dev/test": "workspace:*",
+    "@boring-dev/vite": "workspace:*",
     "@types/node": "^22.0.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",

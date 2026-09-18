@@ -13,7 +13,7 @@ import {
   type Params,
   type PolicyRule,
   type RouteTree,
-} from "@boring/core";
+} from "@boring-dev/core";
 import { installRuntime, shared, storage, type RequestStore } from "./context.ts";
 import { enqueueJob, prepareJobs } from "./jobs.ts";
 import { openDatabase } from "./sqlite.ts";

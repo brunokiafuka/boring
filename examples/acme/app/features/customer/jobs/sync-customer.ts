@@ -1,4 +1,4 @@
-import { job } from "@boring/core";
+import { job } from "@boring-dev/core";
 import { z } from "zod";
 import { Customer } from "../resource";
 

@@ -1,4 +1,4 @@
-import { Outlet, useUser } from "@boring/react";
+import { Outlet, useUser } from "@boring-dev/react";
 import type { User } from "@/shared/auth";
 
 export function AppShell() {

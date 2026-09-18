@@ -1,4 +1,4 @@
-import { action, invalid, success } from "@boring/core";
+import { action, invalid, success } from "@boring-dev/core";
 import { z } from "zod";
 import { SESSION_COOKIE } from "@/shared/auth";
 import { SessionPolicy } from "../policies/session";

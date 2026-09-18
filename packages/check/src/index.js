@@ -64,7 +64,7 @@ const RULES = {
 };
 
 const URL_SHAPED = /\b(page|status|filter|filters|sort|query|search|tab)\b\s*[:=]\s*(signal|useSignal)\(/g;
-const SERVER_SPECIFIER = /^(@boring\/node|node:|pg$|postgres$|better-sqlite3$)/;
+const SERVER_SPECIFIER = /^(@boring-dev\/node|node:|pg$|postgres$|better-sqlite3$)/;
 
 /** Bodies of `name({ ... })` calls, matched by brace depth. */
 function calls(code, name) {
@@ -190,7 +190,7 @@ export async function check(root, { today = new Date() } = {}) {
         title: RULES.B401,
         file,
         line: 1,
-        advice: `add app/features/${feature}/tests/*.test.ts and drive it with @boring/test`,
+        advice: `add app/features/${feature}/tests/*.test.ts and drive it with @boring-dev/test`,
       });
     }
   }

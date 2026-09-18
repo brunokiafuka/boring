@@ -1,5 +1,5 @@
 /** React's JSX, with one change: a <form> may point at a Boring action. */
-import type { ActionRef } from "@boring/core";
+import type { ActionRef } from "@boring-dev/core";
 import type { JSX as ReactJSX } from "react";
 
 type FormProps = ReactJSX.IntrinsicElements["form"];

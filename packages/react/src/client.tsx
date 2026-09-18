@@ -1,4 +1,4 @@
-import type { RouteTree } from "@boring/core";
+import type { RouteTree } from "@boring-dev/core";
 import { hydrateRoot } from "react-dom/client";
 import { BoringApp } from "./app.tsx";
 

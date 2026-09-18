@@ -1,5 +1,5 @@
-import { resource } from "@boring/core";
-import { db } from "@boring/node";
+import { resource } from "@boring-dev/core";
+import { db } from "@boring-dev/node";
 import type { User } from "@/shared/auth";
 
 export const Account = resource("Account", {

@@ -1,4 +1,4 @@
-import type { Job } from "@boring/core";
+import type { Job } from "@boring-dev/core";
 import { shared, storage, type PendingJob } from "./context.ts";
 import type { Database } from "./sqlite.ts";
 

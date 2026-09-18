@@ -1,4 +1,4 @@
-import type { BoringConfig } from "@boring/core";
+import type { BoringConfig } from "@boring-dev/core";
 
 export { drainJobs } from "./jobs.ts";
 export { db, sqlite, postgres, type Database } from "./sqlite.ts";

@@ -1,4 +1,4 @@
-import { useUser } from "@boring/react";
+import { useUser } from "@boring-dev/react";
 import type { User } from "@/shared/auth";
 import { PageHeader } from "@/shared/ui/page-header";
 import { TextField } from "@/shared/ui/text-field";

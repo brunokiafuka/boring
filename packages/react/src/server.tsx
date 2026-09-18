@@ -1,4 +1,4 @@
-import type { RouteTree } from "@boring/core";
+import type { RouteTree } from "@boring-dev/core";
 import { renderToString } from "react-dom/server";
 import { BoringApp, type PageState } from "./app.tsx";
 

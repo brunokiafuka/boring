@@ -1,5 +1,5 @@
 /**
- * Client-side stand-ins for server-only modules. @boring/vite swaps
+ * Client-side stand-ins for server-only modules. @boring-dev/vite swaps
  * actions, policies, jobs and resources for these in the browser bundle.
  */
 import { internals } from "./primitives.ts";

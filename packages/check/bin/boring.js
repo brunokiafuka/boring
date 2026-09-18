@@ -20,7 +20,7 @@ async function loadGraph() {
   });
   try {
     const { manifest } = await server.ssrLoadModule("virtual:boring/server");
-    const { describe } = await server.ssrLoadModule("@boring/node/handler");
+    const { describe } = await server.ssrLoadModule("@boring-dev/node/handler");
     return describe(manifest);
   } finally {
     await server.close();

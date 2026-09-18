@@ -4,7 +4,7 @@
     "module": "ESNext",
     "moduleResolution": "Bundler",
     "jsx": "react-jsx",
-    "jsxImportSource": "@boring/react",
+    "jsxImportSource": "@boring-dev/react",
     "strict": true,
     "noEmit": true,
     "skipLibCheck": true,

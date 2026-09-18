@@ -34,7 +34,7 @@ async function exportsOf(code, id) {
  * Vite owns the machinery. This teaches it the shape of a Boring app, and brings the
  * React adapter with Boring's JSX runtime so a plain <form> can point at an action.
  */
-export const boring = () => [application(), ...react({ jsxImportSource: "@boring/react" })];
+export const boring = () => [application(), ...react({ jsxImportSource: "@boring-dev/react" })];
 
 function application() {
   let root = process.cwd();
@@ -55,10 +55,10 @@ function application() {
   // because the queue must know them even when no route mentions them.
   function virtualModule(id) {
     if (id === CLIENT)
-      return `import { start } from "@boring/react/client";\nimport tree from "/app/routes.ts";\nstart(tree);`;
+      return `import { start } from "@boring-dev/react/client";\nimport tree from "/app/routes.ts";\nstart(tree);`;
 
     const jobs = featureFiles("jobs");
-    return `import { createRender } from "@boring/react/server";
+    return `import { createRender } from "@boring-dev/react/server";
 import config from "/boring.config.ts";
 import tree from "/app/routes.ts";
 ${imports(jobs, "job")}
@@ -74,7 +74,7 @@ export const manifest = { tree, jobModules: ${list(jobs, "job")}, config, render
       test: { include: ["app/**/tests/**/*.test.{ts,tsx}"], environment: "node" },
       appType: "custom",
       resolve: { dedupe: ["react", "react-dom"], alias: { "@": resolve(user.root ?? process.cwd(), "app") } },
-      ssr: { noExternal: [/^@boring\//] },
+      ssr: { noExternal: [/^@boring-dev\//] },
       optimizeDeps: {
         entries: ["app/**/*.{ts,tsx}"],
         include: [
@@ -85,7 +85,7 @@ export const manifest = { tree, jobModules: ${list(jobs, "job")}, config, render
           "react/jsx-dev-runtime",
           "zod",
         ],
-        exclude: ["@boring/react", "@boring/core"],
+        exclude: ["@boring-dev/react", "@boring-dev/core"],
       },
     }),
 
@@ -115,7 +115,7 @@ export const manifest = { tree, jobModules: ${list(jobs, "job")}, config, render
           return name === "default" ? `export default ${value};` : `export const ${name} = ${value};`;
         });
         return {
-          code: `import { actionRef, serverOnly } from "@boring/core/stub";\n${lines.join("\n")}`,
+          code: `import { actionRef, serverOnly } from "@boring-dev/core/stub";\n${lines.join("\n")}`,
           map: null,
         };
       }
@@ -128,7 +128,7 @@ export const manifest = { tree, jobModules: ${list(jobs, "job")}, config, render
         .map((e) => `boringInternals.tag(${e.ln}, "${tag}#${e.n}");`);
       if (!tags.length) return;
       return {
-        code: `${code}\nimport { internals as boringInternals } from "@boring/core";\n${tags.join("\n")}\n`,
+        code: `${code}\nimport { internals as boringInternals } from "@boring-dev/core";\n${tags.join("\n")}\n`,
         map: null,
       };
     },
@@ -154,7 +154,7 @@ export const manifest = { tree, jobModules: ${list(jobs, "job")}, config, render
 
         try {
           const { manifest } = await server.ssrLoadModule(SERVER);
-          const handler = await server.ssrLoadModule("@boring/node/handler");
+          const handler = await server.ssrLoadModule("@boring-dev/node/handler");
 
           if (path === "/__boring/graph") {
             res.setHeader("content-type", "application/json");

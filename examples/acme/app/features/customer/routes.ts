@@ -1,4 +1,4 @@
-import { allow, index, route, routes } from "@boring/core";
+import { allow, index, route, routes } from "@boring-dev/core";
 import type { User } from "@/shared/auth";
 import { updateCustomer } from "./actions/update-customer";
 import { CustomerLayout } from "./layouts/customer-layout";

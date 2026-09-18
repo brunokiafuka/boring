@@ -5,9 +5,9 @@
 import { manifest } from "virtual:boring/server";
 // oxlint-disable-next-line import/no-unassigned-import -- types for the virtual module above
 import "./virtual.d.ts";
-import { nearestData, type ActionRef, type ActionResult } from "@boring/core";
-import { handle, type PageState } from "@boring/node/handler";
-import { drainJobs } from "@boring/node";
+import { nearestData, type ActionRef, type ActionResult } from "@boring-dev/core";
+import { handle, type PageState } from "@boring-dev/node/handler";
+import { drainJobs } from "@boring-dev/node";
 
 export interface Visit<Data = any> {
   status: number;

@@ -1,4 +1,4 @@
-import { useComputed, useSignal } from "@boring/react";
+import { useComputed, useSignal } from "@boring-dev/react";
 import { money } from "@/shared/utils/format";
 import { PageHeader } from "@/shared/ui/page-header";
 import { TextField } from "@/shared/ui/text-field";

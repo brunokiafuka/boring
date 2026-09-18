@@ -1,5 +1,5 @@
 import { AsyncLocalStorage } from "node:async_hooks";
-import { internals } from "@boring/core";
+import { internals } from "@boring-dev/core";
 import type { Database } from "./sqlite.ts";
 
 export interface PendingJob {

@@ -1,6 +1,6 @@
-import { defineBoring, signals } from "@boring/core";
-import { auth, sqlite } from "@boring/node";
-import { react } from "@boring/react";
+import { defineBoring, signals } from "@boring-dev/core";
+import { auth, sqlite } from "@boring-dev/node";
+import { react } from "@boring-dev/react";
 import { getUser } from "./app/shared/auth";
 import { migrate } from "./app/db/schema";
 

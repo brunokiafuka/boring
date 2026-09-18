@@ -1,5 +1,5 @@
-import type { Cookies } from "@boring/core";
-import { db } from "@boring/node";
+import type { Cookies } from "@boring-dev/core";
+import { db } from "@boring-dev/node";
 
 export interface User {
   id: string;

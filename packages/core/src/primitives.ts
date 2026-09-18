@@ -2,7 +2,7 @@ import type { ZodType, z } from "zod";
 import type { Params } from "./routing.ts";
 
 /**
- * The server runtime (@boring/node) installs itself here. Core stays
+ * The server runtime (@boring-dev/node) installs itself here. Core stays
  * platform-free so routes and signals can load in the browser.
  */
 export interface Runtime {
@@ -19,7 +19,7 @@ const noRuntime: Runtime = {
 let runtime = noRuntime;
 
 /**
- * The view adapter (@boring/react) installs these, so a component can ask a
+ * The view adapter (@boring-dev/react) installs these, so a component can ask a
  * resource or an action about the current route without importing a helper.
  */
 export interface ActionState {
@@ -222,12 +222,12 @@ export const signals = () => ({ name: "signals" });
 
 /** Hooks for the framework's own packages. Applications never need these. */
 export const internals = {
-  /** @boring/node: track resource keys and queue jobs for the current request. */
+  /** @boring-dev/node: track resource keys and queue jobs for the current request. */
   setRuntime: (next: Runtime) => void (runtime = next),
-  /** @boring/react: how `Resource.current()` and `action.state()` read the route. */
+  /** @boring-dev/react: how `Resource.current()` and `action.state()` read the route. */
   setViewReaders: (next: ViewReaders) => void (readers = next),
   viewReaders: () => readers,
-  /** @boring/vite, on the server: names every exported primitive so the app graph can explain it. */
+  /** @boring-dev/vite, on the server: names every exported primitive so the app graph can explain it. */
   tag(value: any, id: string) {
     if (value == null || (typeof value !== "object" && typeof value !== "function")) return;
     if (!Object.isExtensible(value) || "$$id" in value) return;

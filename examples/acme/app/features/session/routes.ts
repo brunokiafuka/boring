@@ -1,4 +1,4 @@
-import { allow, index, routes } from "@boring/core";
+import { allow, index, routes } from "@boring-dev/core";
 import { switchUser } from "./actions/switch-user";
 import { Account } from "./resource";
 import { SessionPage } from "./views/session";

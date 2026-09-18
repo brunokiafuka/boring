@@ -1,4 +1,4 @@
-import type { Database } from "@boring/node";
+import type { Database } from "@boring-dev/node";
 
 export function migrate(db: Database) {
   db.exec(`

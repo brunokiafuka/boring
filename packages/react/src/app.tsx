@@ -6,7 +6,7 @@ import {
   nearestData,
   type ActionResult,
   type RouteTree,
-} from "@boring/core";
+} from "@boring-dev/core";
 import {
   createContext,
   createElement,

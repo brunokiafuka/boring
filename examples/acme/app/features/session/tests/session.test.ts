@@ -1,4 +1,4 @@
-import { testApp } from "@boring/test";
+import { testApp } from "@boring-dev/test";
 import { expect, test } from "vitest";
 import { switchUser } from "../actions/switch-user";
 

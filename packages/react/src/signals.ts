@@ -1,4 +1,4 @@
-import { computed, signal, type Signal } from "@boring/core";
+import { computed, signal, type Signal } from "@boring-dev/core";
 import { useState, useSyncExternalStore } from "react";
 
 /** Subscribes this component to a signal and returns its value. */

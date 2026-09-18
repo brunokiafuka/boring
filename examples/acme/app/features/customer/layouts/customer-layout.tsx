@@ -1,4 +1,4 @@
-import { Outlet } from "@boring/react";
+import { Outlet } from "@boring-dev/react";
 import { PageHeader } from "@/shared/ui/page-header";
 import { CustomerPlanBadge } from "../components/customer-plan-badge";
 import { Customer } from "../resource";

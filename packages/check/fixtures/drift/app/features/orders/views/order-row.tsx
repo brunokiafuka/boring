@@ -1,4 +1,4 @@
-import { db } from "@boring/node";
+import { db } from "@boring-dev/node";
 import { reportTotals } from "@/features/reports";
 // boring-ignore B110 until 2099-01-01: migrating this chart into orders
 import { Chart } from "@/features/reports/views/chart";

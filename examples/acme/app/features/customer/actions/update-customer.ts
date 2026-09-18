@@ -1,4 +1,4 @@
-import { action, invalid, success } from "@boring/core";
+import { action, invalid, success } from "@boring-dev/core";
 import { SyncCustomerJob } from "../jobs/sync-customer";
 import { CustomerPolicy } from "../policies/customer";
 import { Customer } from "../resource";

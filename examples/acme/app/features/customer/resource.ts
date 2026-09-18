@@ -1,5 +1,5 @@
-import { resource } from "@boring/core";
-import { db, type Database } from "@boring/node";
+import { resource } from "@boring-dev/core";
+import { db, type Database } from "@boring-dev/node";
 import { z } from "zod";
 import { PLANS } from "./internal/plans";
 

@@ -20,7 +20,7 @@ pnpm typecheck
   validation and one business rule. Save queues `jobs/sync-customer.ts` after the transaction commits.
 - `app/features/customer/views/customer-list.tsx`: filters that live in the URL, and a signal-based selection.
 - `/session`: switch between Ada (admin), Vik (viewer, refused on save) and Oz (another organisation).
-- `app/features/*/tests`: the testing convention, driven by `@boring/test`.
+- `app/features/*/tests`: the testing convention, driven by `@boring-dev/test`.
 
 Try it with JavaScript disabled: forms still post, errors still render, redirects still work.
 

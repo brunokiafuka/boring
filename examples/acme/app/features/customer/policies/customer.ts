@@ -1,4 +1,4 @@
-import { policy, type PolicyContext } from "@boring/core";
+import { policy, type PolicyContext } from "@boring-dev/core";
 import type { User } from "@/shared/auth";
 import type { CustomerRecord } from "../resource";
 
