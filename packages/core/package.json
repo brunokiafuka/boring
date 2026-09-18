@@ -1,6 +1,6 @@
 {
   "name": "@boring-dev/core",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "BoringJS: routing tree and compiler, resource, action, policy, job, signals. Platform-free.",
   "homepage": "https://github.com/brunokiafuka/boring#readme",
   "license": "MIT",

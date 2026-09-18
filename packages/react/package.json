@@ -1,6 +1,6 @@
 {
   "name": "@boring-dev/react",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "BoringJS: server render, hydration, client router, Outlet, the form-aware JSX runtime.",
   "homepage": "https://github.com/brunokiafuka/boring#readme",
   "license": "MIT",

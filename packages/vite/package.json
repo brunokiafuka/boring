@@ -1,6 +1,6 @@
 {
   "name": "@boring-dev/vite",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "BoringJS: the Vite plugin. Serves the app, keeps server code out of the browser, brings the React adapter.",
   "homepage": "https://github.com/brunokiafuka/boring#readme",
   "license": "MIT",

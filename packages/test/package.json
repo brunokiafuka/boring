@@ -1,6 +1,6 @@
 {
   "name": "@boring-dev/test",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "BoringJS: testApp(), drive the application through its real request path.",
   "homepage": "https://github.com/brunokiafuka/boring#readme",
   "license": "MIT",
