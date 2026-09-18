@@ -140,7 +140,12 @@ export function compile(tree: RouteTree): Compiled {
   for (const { from, to } of out.redirects) {
     if (seen.has(shape(from)))
       out.problems.push(`redirect ${from} is shadowed by a route with the same path`);
-    const lands = from !== to && (seen.has(shape(to)) || out.redirects.some((other) => other.from === to));
+    // A target lands on a route with the same shape (/b/:id → /c/:id) or on one that matches it (/docs/intro → /docs/:slug).
+    const lands =
+      from !== to &&
+      (seen.has(shape(to)) ||
+        [...seen.values()].some((pattern) => matchPath(pattern, to)) ||
+        out.redirects.some((other) => other.from === to));
     if (!lands) out.problems.push(`redirect ${from} → ${to} leads nowhere`);
   }
 

@@ -99,3 +99,12 @@ test("default deny, dangling redirects and empty branches are reported", () => {
     "redirect /old → /missing leads nowhere",
   ]);
 });
+
+test("a redirect lands on a param route when its target matches", () => {
+  const tree = routes({
+    policy: allow.everyone,
+    children: [redirect("/docs", "/docs/intro"), route("/docs/:slug", List)],
+  });
+  expect(compile(tree).problems).toEqual([]);
+  expect(matchRoute(compile(tree), "/docs")).toEqual({ redirect: "/docs/intro" });
+});
