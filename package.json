@@ -5,12 +5,13 @@
   "scripts": {
     "dev": "pnpm --filter acme dev",
     "check": "pnpm --filter acme check",
-    "test": "node --test packages/check/test/*.test.js && vitest run --root packages/core && pnpm --filter acme test",
+    "test": "node --test packages/check/test/*.test.js && vitest run --root packages/core && pnpm --filter acme test && pnpm --filter site test",
     "lint": "oxlint",
     "fmt": "oxfmt",
     "fmt:check": "oxfmt --check",
     "release:version": "pnpm -r --filter './packages/*' exec npm version --no-git-tag-version",
-    "release": "pnpm test && pnpm lint && pnpm fmt:check && pnpm --filter acme typecheck && pnpm -r --filter './packages/*' publish --access public"
+    "release": "pnpm test && pnpm lint && pnpm fmt:check && pnpm --filter acme typecheck && pnpm --filter site typecheck && pnpm -r --filter './packages/*' publish --access public",
+    "site": "pnpm --filter site dev"
   },
   "devDependencies": {
     "oxfmt": "^0.68.0",

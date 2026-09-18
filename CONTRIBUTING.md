@@ -51,6 +51,7 @@ packages/
 └── create    pnpm create @boring-dev: the scaffolder and its template/
 examples/
 └── acme      the reference app: see examples/acme/README.md
+site/         the marketing site and docs, itself a Boring app: `pnpm site`
 ```
 
 ## Checks
@@ -63,6 +64,8 @@ pnpm lint           # oxlint
 pnpm fmt            # oxfmt; `pnpm fmt:check` to verify without writing
 pnpm --filter acme typecheck
 pnpm --filter acme check
+pnpm --filter site typecheck
+pnpm --filter site check
 ```
 
 ## Conventions

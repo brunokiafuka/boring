@@ -1,0 +1,31 @@
+{
+  "name": "site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "check": "boring check",
+    "explain": "boring explain",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@boring-dev/core": "workspace:*",
+    "@boring-dev/node": "workspace:*",
+    "@boring-dev/react": "workspace:*",
+    "marked": "^18.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@boring-dev/check": "workspace:*",
+    "@boring-dev/test": "workspace:*",
+    "@boring-dev/vite": "workspace:*",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.7.0",
+    "vite": "^6.0.0",
+    "vitest": "^3.2.0"
+  }
+}
