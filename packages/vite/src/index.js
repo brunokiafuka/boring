@@ -76,7 +76,8 @@ export const manifest = { tree, jobModules: ${list(jobs, "job")}, config, render
       resolve: { dedupe: ["react", "react-dom"], alias: { "@": resolve(user.root ?? process.cwd(), "app") } },
       ssr: { noExternal: [/^@boring-dev\//] },
       optimizeDeps: {
-        entries: ["app/**/*.{ts,tsx}"],
+        // Tests import @boring-dev/test, which only resolves inside this plugin's server graph.
+        entries: ["app/**/*.{ts,tsx}", "!app/**/tests/**"],
         include: [
           "react",
           "react-dom",
@@ -85,7 +86,13 @@ export const manifest = { tree, jobModules: ${list(jobs, "job")}, config, render
           "react/jsx-dev-runtime",
           "zod",
         ],
-        exclude: ["@boring-dev/react", "@boring-dev/core"],
+        exclude: [
+          "@boring-dev/react",
+          "@boring-dev/core",
+          "@boring-dev/node",
+          "@boring-dev/test",
+          "@boring-dev/check",
+        ],
       },
     }),
 
