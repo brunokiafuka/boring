@@ -1,9 +1,8 @@
 ---
 title: Testing
 order: 5
+description: One style: drive the app through its real request path as a chosen user.
 ---
-
-# Testing
 
 One style. Tests live in `app/features/<feature>/tests/*.test.ts`, and the Vite plugin tells Vitest where they are.
 

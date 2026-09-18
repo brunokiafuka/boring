@@ -1,9 +1,8 @@
 ---
 title: Routing
 order: 3
+description: Five functions, an explicit tree, and how a request walks it.
 ---
-
-# Routing
 
 Routing is explicit. No file-based routing, so moving a file never changes a URL. The vocabulary is five functions
 and the tree is plain data.

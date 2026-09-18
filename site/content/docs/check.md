@@ -1,9 +1,8 @@
 ---
 title: boring check
 order: 6
+description: The rules boring check enforces, and what boring explain tells you.
 ---
-
-# boring check
 
 The shape is checked, not hoped for. `boring check` reads the same compiled route tree as the server and reports
 drift with a rule number and the line.

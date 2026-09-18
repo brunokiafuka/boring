@@ -1,9 +1,8 @@
 ---
 title: Actions and forms
 order: 4
+description: Forms, actions, resources and policies: how a mutation gets to the server and back.
 ---
-
-# Actions and forms
 
 Small vocabulary, platform first. A form is a form.
 

@@ -1,9 +1,8 @@
 ---
 title: Features
 order: 2
+description: The folder is the unit: what goes where, and the import rules that keep it that way.
 ---
-
-# Features
 
 The feature is the unit of understanding. Organize around capabilities, not framework concepts. Everything needed
 to understand a feature sits in its folder.

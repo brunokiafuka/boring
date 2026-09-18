@@ -1,19 +1,19 @@
 import { allow, route, routes } from "@boring-dev/core";
-import { DocsLayout } from "./layouts/docs-layout";
 import { Doc } from "./resource";
 import { DocPage } from "./views/doc-page";
 
-/** /docs is a branch: the page list loads once for the layout, each page loads its own document. */
+/** One page loads the document and the list around it, so the view can place it. */
 export const docsRoutes = routes({
-  layout: DocsLayout,
   policy: allow.everyone,
-  load: () => Doc.list(),
 
   children: [
     route("/:slug", {
       view: DocPage,
-      load: ({ params }) => Doc.find(params.slug),
-      title: ({ data }) => `${data.title}: BoringJS docs`,
+      load: ({ params }) => {
+        const page = Doc.find(params.slug);
+        return page && { page, pages: Doc.list() };
+      },
+      title: ({ data }) => `${data.page.title}: BoringJS docs`,
     }),
   ],
 });

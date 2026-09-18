@@ -72,10 +72,11 @@ export function Landing() {
   return (
     <main className="landing">
       <section className="hero">
-        <h1>Software should be boring.</h1>
+        <h1>
+          Software should be boring. <span className="hero-invite">Let's start with your frontend.</span>
+        </h1>
         <p className="lede">
-          Predictable, explicit, composable, and hard to make incoherent by accident. BoringJS is a small
-          application model on top of Vite. Vite owns the machinery. Boring owns the shape.
+          A small application model on top of Vite. Vite owns the machinery. Boring owns the shape.
         </p>
         <pre className="install">
           <code>pnpm create @boring-dev my-app</code>
@@ -83,22 +84,17 @@ export function Landing() {
       </section>
 
       <section>
-        <h2>One command explains the whole application.</h2>
-        <p>
-          What features exist, what each exposes, every URL, and how layouts compose. You should not need to
-          search the repository, and this is the test of that.
-        </p>
+        <h2>One command explains the whole app.</h2>
+        <p>Every feature, every URL, every layout. You never search the repository.</p>
         <pre className="terminal">
           <code>{explain}</code>
         </pre>
       </section>
 
       <section>
-        <h2>The feature is the unit of understanding.</h2>
+        <h2>A feature is a folder.</h2>
         <p>
-          Organize around capabilities, not framework concepts. Everything needed to understand a feature sits
-          in its folder, and <code>index.ts</code> is the only door in. Cross-feature deep imports, cycles,
-          and leaking <code>internal/</code> are errors, not conventions.
+          Everything about a capability lives together, and <code>index.ts</code> is the only door in.
         </p>
         <pre>
           <code>{tree}</code>
@@ -106,11 +102,9 @@ export function Landing() {
       </section>
 
       <section>
-        <h2>Routing is explicit.</h2>
+        <h2>Routes are data.</h2>
         <p>
-          No file-based routing, so moving a file never changes a URL. The vocabulary is five functions and
-          the tree is plain data. A branch loads and guards its data once; the layout and every view under it
-          read it.
+          Five functions, no file-based routing. A branch loads and guards once; everything under it reads it.
         </p>
         <pre>
           <code>{routesCode}</code>
@@ -118,23 +112,16 @@ export function Landing() {
       </section>
 
       <section>
-        <h2>Small vocabulary, platform first.</h2>
-        <p>
-          Views are plain React functions. A form is a form: without JavaScript it posts natively, with it one
-          document listener submits in place. Links are links. Progress is a data attribute and CSS. The
-          entire UI-side API is <code>Outlet</code>, <code>useUser</code> and three signal hooks.
-        </p>
+        <h2>A form is a form.</h2>
+        <p>Plain React, plain HTML. It posts without JavaScript and submits in place with it.</p>
         <pre>
           <code>{formCode}</code>
         </pre>
       </section>
 
       <section>
-        <h2>Tests go through the real request path.</h2>
-        <p>
-          One style. Policies, loaders, validation, transactions and jobs all run, as a chosen user, without
-          rendering anything.
-        </p>
+        <h2>Tests take the real path.</h2>
+        <p>Policies, loaders, validation, transactions and jobs run as a chosen user. Nothing renders.</p>
         <pre>
           <code>{`const app = testApp();
 const page = await app.as(vik).visit("/customers/c_102");
@@ -144,10 +131,9 @@ await app.jobs.drain();`}</code>
       </section>
 
       <section>
-        <h2>The shape is checked, not hoped for.</h2>
+        <h2>The shape is checked.</h2>
         <p>
-          <code>boring check</code> reads the same compiled route tree as the server and reports drift with a
-          rule number and the line. Suppressions need a reason and an expiry date.
+          <code>boring check</code> reads the same route tree as the server and names the line that drifted.
         </p>
         <pre className="terminal">
           <code>{checkOutput}</code>
@@ -160,7 +146,7 @@ await app.jobs.drain();`}</code>
           <code>pnpm create @boring-dev my-app</code>
         </pre>
         <p>
-          Requires Node 22.5. Then read the <a href="/docs">docs</a>, or open the{" "}
+          Node 22.5 or newer. Then the <a href="/docs">docs</a>, or the{" "}
           <a href="https://github.com/brunokiafuka/boring/tree/main/examples/acme">reference app</a>.
         </p>
       </section>

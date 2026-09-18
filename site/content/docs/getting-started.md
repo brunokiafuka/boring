@@ -1,9 +1,8 @@
 ---
 title: Getting started
 order: 1
+description: Install, scaffold an app, and learn what each file is for.
 ---
-
-# Getting started
 
 BoringJS is a small application model on top of Vite. Vite owns the machinery: the dev server, hot reload,
 TypeScript, JSX. Boring owns the shape: where things go, how routes are declared, how data reaches a view, how a
