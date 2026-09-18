@@ -20,13 +20,13 @@ importers:
 
   examples/acme:
     dependencies:
-      '@boring/core':
+      '@boring-dev/core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@boring/node':
+      '@boring-dev/node':
         specifier: workspace:*
         version: link:../../packages/node
-      '@boring/react':
+      '@boring-dev/react':
         specifier: workspace:*
         version: link:../../packages/react
       react:
@@ -39,13 +39,13 @@ importers:
         specifier: ^3.24.0
         version: 3.25.76
     devDependencies:
-      '@boring/check':
+      '@boring-dev/check':
         specifier: workspace:*
         version: link:../../packages/check
-      '@boring/test':
+      '@boring-dev/test':
         specifier: workspace:*
         version: link:../../packages/test
-      '@boring/vite':
+      '@boring-dev/vite':
         specifier: workspace:*
         version: link:../../packages/vite
       '@types/node':
@@ -85,15 +85,17 @@ importers:
         specifier: ^3.24.0
         version: 3.25.76
 
+  packages/create: {}
+
   packages/node:
     dependencies:
-      '@boring/core':
+      '@boring-dev/core':
         specifier: workspace:*
         version: link:../core
 
   packages/react:
     dependencies:
-      '@boring/core':
+      '@boring-dev/core':
         specifier: workspace:*
         version: link:../core
       react:
@@ -105,10 +107,10 @@ importers:
 
   packages/test:
     dependencies:
-      '@boring/core':
+      '@boring-dev/core':
         specifier: workspace:*
         version: link:../core
-      '@boring/node':
+      '@boring-dev/node':
         specifier: workspace:*
         version: link:../node
 

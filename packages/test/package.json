@@ -1,12 +1,29 @@
 {
-  "name": "@boring/test",
+  "name": "@boring-dev/test",
   "version": "0.1.0",
+  "description": "BoringJS: testApp(), drive the application through its real request path.",
+  "homepage": "https://github.com/brunokiafuka/boring#readme",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brunokiafuka/boring.git",
+    "directory": "packages/test"
+  },
+  "files": [
+    "src"
+  ],
   "type": "module",
   "exports": {
     ".": "./src/index.ts"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
-    "@boring/core": "workspace:*",
-    "@boring/node": "workspace:*"
+    "@boring-dev/core": "workspace:*",
+    "@boring-dev/node": "workspace:*"
+  },
+  "engines": {
+    "node": ">=22.5"
   }
 }
