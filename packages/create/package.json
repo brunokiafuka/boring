@@ -1,0 +1,26 @@
+{
+  "name": "@boring-dev/create",
+  "version": "0.1.0",
+  "description": "Scaffold a BoringJS application: pnpm create @boring-dev my-app",
+  "homepage": "https://github.com/brunokiafuka/boring#readme",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brunokiafuka/boring.git",
+    "directory": "packages/create"
+  },
+  "bin": {
+    "create-boring": "./bin/create-boring.js"
+  },
+  "files": [
+    "bin",
+    "template"
+  ],
+  "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=22.5"
+  }
+}
